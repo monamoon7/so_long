@@ -6,7 +6,7 @@
 /*   By: mona <mona@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/05/05 15:51:01 by mona          #+#    #+#                 */
-/*   Updated: 2025/05/12 15:13:19 by mona          ########   odam.nl         */
+/*   Updated: 2025/05/16 14:52:25 by mona          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,9 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	render_map(&game);
+	mlx_key_hook(game.win, handle_key, &game);
+	mlx_hook(game.win, 17, 0, exit_game, &game);
 	mlx_loop(game.mlx);
-	free_map(game.map);
 	return (0);
 }
+
