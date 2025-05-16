@@ -6,7 +6,7 @@
 /*   By: mona <mona@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/05/05 15:51:01 by mona          #+#    #+#                 */
-/*   Updated: 2025/05/16 14:52:25 by mona          ########   odam.nl         */
+/*   Updated: 2025/05/16 17:58:16 by mona          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,18 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	if (!initialize_game(&game))
-	{
+	{	
 		write(2, "Failed to initialize game.\n", 28);
-		free_map(game.map);
+		if (!game.img_wall)
+			write(2, "Missing wall.xpm\n", 18);
+		if (!game.img_floor)
+			write(2, "Missing floor.xpm\n", 19);
+		if (!game.img_player)
+			write(2, "Missing player.xpm\n", 20);
+		if (!game.img_coin)
+			write(2, "Missing coin.xpm\n", 18);
+		if (!game.img_exit)
+			write(2, "Missing exit.xpm\n", 18);
 		return (1);
 	}
 	render_map(&game);

@@ -6,7 +6,7 @@
 /*   By: mona <mona@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/05/05 16:00:40 by mona          #+#    #+#                 */
-/*   Updated: 2025/05/05 17:07:15 by mona          ########   odam.nl         */
+/*   Updated: 2025/05/16 17:55:36 by mona          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,8 @@ int	initialize_game(t_game *game)
 	game->img_player = mlx_xpm_file_to_image(game->mlx, "assets/player.xpm", &w, &h);
 	game->img_coin = mlx_xpm_file_to_image(game->mlx, "assets/coin.xpm", &w, &h);
 	game->img_exit = mlx_xpm_file_to_image(game->mlx, "assets/exit.xpm", &w, &h);
+	if (!game->img_wall || !game->img_floor || !game->img_player
+		|| !game->img_coin || !game->img_exit)
+		return (0);
 	return (1);
 }
