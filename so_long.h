@@ -6,7 +6,7 @@
 /*   By: mona <mona@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/13 09:58:06 by mona          #+#    #+#                 */
-/*   Updated: 2025/05/16 12:38:12 by mona          ########   odam.nl         */
+/*   Updated: 2025/05/16 14:50:59 by mona          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,7 @@ void	render_map(t_game *game);
 
 void	ft_putstr(char *s);
 void	ft_putnbr(int n);
-\
+int	exit_game(t_game *game);
+
+
 #endif
