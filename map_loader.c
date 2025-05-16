@@ -6,11 +6,34 @@
 /*   By: mona <mona@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/05/05 15:57:17 by mona          #+#    #+#                 */
-/*   Updated: 2025/05/16 12:18:31 by mona          ########   odam.nl         */
+/*   Updated: 2025/05/16 15:02:04 by mona          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+static void	set_player_position(t_game *game)
+{
+	int	y;
+	int x;
+
+	y = 0;
+	while (game->map[y])
+	{
+		x = 0;
+		while (game->map[y][x])
+		{
+			if (game->map[y][x] == 'P')
+			{
+				game->player_x = x;
+				game->player_y = y;
+				return ;
+			}
+			x++;
+		}
+		y++;
+	}
+}
 
 static int	count_map_lines(const char *path)
 {
@@ -56,25 +79,3 @@ int	load_map(t_game *game, const char *path)
 	return (1);
 }
 
-static void	set_player_position(t_game *game)
-{
-	int	y;
-	int x;
-
-	y = 0;
-	while (game->map[y])
-	{
-		x = 0;
-		while (game->map[y][x])
-		{
-			if (game->map[y][x] == 'P')
-			{
-				game->player_x = x;
-				game->player_y = y;
-				return ;
-			}
-			x++;
-		}
-		y++;
-	}
-}

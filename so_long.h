@@ -6,7 +6,7 @@
 /*   By: mona <mona@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/13 09:58:06 by mona          #+#    #+#                 */
-/*   Updated: 2025/05/16 14:50:59 by mona          ########   odam.nl         */
+/*   Updated: 2025/05/16 15:03:32 by mona          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,12 @@ typedef struct s_game
 }	t_game;
 
 int	load_map(t_game *game, const char *path);
-
+int	handle_key(int keycode, t_game *game);
 void	free_map(char **map);
 
 int	initialize_game(t_game *game);
-
+int	has_collectibles(t_game *game);
 void	render_map(t_game *game);
-
 void	ft_putstr(char *s);
 void	ft_putnbr(int n);
 int	exit_game(t_game *game);
