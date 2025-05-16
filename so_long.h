@@ -6,7 +6,7 @@
 /*   By: mona <mona@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/13 09:58:06 by mona          #+#    #+#                 */
-/*   Updated: 2025/05/05 16:01:10 by mona          ########   odam.nl         */
+/*   Updated: 2025/05/05 16:27:30 by mona          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
-# include <mlx.h>
-# include <get_next_line.h>
+# include "minilibx-linux/mlx.h"
+# include "get_next_line/get_next_line.h"
 
-# define TITLE_SIZE 64
+# define TILE_SIZE 64
 
 typedef struct s_game
 {
@@ -35,6 +35,9 @@ typedef struct s_game
 
 int	load_map(t_game *game, const char *path);
 
+void	free_map(char **map);
+
 int	initialize_game(t_game *game);
 
+void	render_map(t_game *game);
 #endif

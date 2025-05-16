@@ -1,39 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   free_map.c                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mona <mona@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2025/05/05 15:51:01 by mona          #+#    #+#                 */
-/*   Updated: 2025/05/12 15:13:19 by mona          ########   odam.nl         */
+/*   Created: 2025/05/05 16:15:47 by mona          #+#    #+#                 */
+/*   Updated: 2025/05/05 16:16:30 by mona          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	main(int argc, char **argv)
+void	free_map(char **map)
 {
-	t_game	game;
+	int	i = 0;
 
-	if (argc != 2)
-	{
-		write(2, "Usage: ./so_long <map.ber>\n", 28);
-		return (1);
-	}
-	if (!load_map(&game, argv[1]))
-	{
-		write(2, "Failed to load map.\n", 21);
-		return (1);
-	}
-	if (!initialize_game(&game))
-	{
-		write(2, "Failed to initialize game.\n", 28);
-		free_map(game.map);
-		return (1);
-	}
-	render_map(&game);
-	mlx_loop(game.mlx);
-	free_map(game.map);
-	return (0);
+	while (map[i])
+		free(map[i++]);
+	free(map);
 }
