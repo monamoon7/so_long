@@ -1,6 +1,6 @@
 NAME = so_long
 
-SRC = main.c map_loader.c render_map.c free_map.c \
+SRC = main.c map_loader.c render_map.c free_map.c utils.c controls.c \
 		get_next_line/get_next_line.c get_next_line/get_next_line_utils.c
 
 OBJ = $(SRC:.c=.o)

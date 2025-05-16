@@ -6,7 +6,7 @@
 /*   By: mona <mona@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/13 09:58:06 by mona          #+#    #+#                 */
-/*   Updated: 2025/05/16 12:12:05 by mona          ########   odam.nl         */
+/*   Updated: 2025/05/16 12:38:12 by mona          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
+# 
 # include "minilibx-linux/mlx.h"
 # include "get_next_line/get_next_line.h"
 
@@ -43,4 +44,8 @@ void	free_map(char **map);
 int	initialize_game(t_game *game);
 
 void	render_map(t_game *game);
+
+void	ft_putstr(char *s);
+void	ft_putnbr(int n);
+\
 #endif
