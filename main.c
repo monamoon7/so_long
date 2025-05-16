@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   main.c                                             :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: mona <mona@student.codam.nl>                 +#+                     */
+/*   By: mona <mona@student.42.fr>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/05/05 15:51:01 by mona          #+#    #+#                 */
-/*   Updated: 2025/05/16 17:58:16 by mona          ########   odam.nl         */
+/*   Updated: 2025/05/16 18:57:19 by mona          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,3 @@ int	main(int argc, char **argv)
 	mlx_loop(game.mlx);
 	return (0);
 }
-

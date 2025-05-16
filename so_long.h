@@ -6,7 +6,7 @@
 /*   By: mona <mona@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/13 09:58:06 by mona          #+#    #+#                 */
-/*   Updated: 2025/05/16 15:03:32 by mona          ########   odam.nl         */
+/*   Updated: 2025/05/16 18:23:08 by mona          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
-# 
 # include "minilibx-linux/mlx.h"
 # include "get_next_line/get_next_line.h"
 
