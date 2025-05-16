@@ -6,7 +6,7 @@
 /*   By: mona <mona@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/13 09:58:06 by mona          #+#    #+#                 */
-/*   Updated: 2025/05/05 16:27:30 by mona          ########   odam.nl         */
+/*   Updated: 2025/05/16 12:12:05 by mona          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@ typedef struct s_game
 	void	*img_coin;
 	void	*img_exit;
 	char	**map;
+	int		player_x;
+	int		player_y;
+	int		move_count;
 }	t_game;
 
 int	load_map(t_game *game, const char *path);
